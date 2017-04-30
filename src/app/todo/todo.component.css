@@ -1,0 +1,10 @@
+.view{
+    padding:10px;
+}
+img{
+    width:100px;
+    display:inline-block;
+}
+audio{
+    display:inline-block;
+}

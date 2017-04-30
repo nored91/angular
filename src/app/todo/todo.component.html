@@ -1,0 +1,28 @@
+<div *ngIf="getType()==0">
+  <div class="view">
+    <input #inputFait class="toggle" type="checkbox" name="fait" [ngModel]="nf.fait" (ngModelChange)="fait(inputFait.checked)">
+    <label class="texte" (dblclick)="edit()">{{ nf.texte }}</label>
+    <button class="destroy" (click)="dispose()"></button>
+  </div>
+  <form *ngIf="editing" (ngSubmit)="setText(newText.value)">
+    <input class="edit" [ngModel]="nf.texte" (blur)="setText(newText.value)" #newText name="texte">
+  </form>
+</div>
+<div *ngIf="getType()==1">
+  <div class="view">
+    <input #inputFait class="toggle" type="checkbox" name="fait" [ngModel]="nf.fait" (ngModelChange)="fait(inputFait.checked)">
+    <label class="texte"><img src="{{getPath()}}"/></label>
+    <button class="destroy" (click)="dispose()"></button>
+  </div>
+</div>
+<div *ngIf="getType()==2">
+  <div class="view">
+    <input #inputFait class="toggle" type="checkbox" name="fait" [ngModel]="nf.fait" (ngModelChange)="fait(inputFait.checked)">
+    <label class="texte">
+      <audio src="{{getPath()}}">
+      Votre navigateur ne supporte pas l'élément <code>audio</code>.
+      </audio>
+  </label>
+    <button class="destroy" (click)="dispose()"></button>
+  </div>
+</div>

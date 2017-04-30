@@ -1,0 +1,6 @@
+<section>
+    <ul class="filters">
+      <li><a [class.selected]="getCurrentType() === 0" (click)="setTypeTexte()" class="typeTexte">Texte</a></li>
+      <li><a  [class.selected]="getCurrentType() > 0" (click)="setTypeImage()" class="typeImage">Image/Son</a></li>
+    </ul>
+</section>

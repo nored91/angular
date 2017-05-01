@@ -4,8 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Upload multimédia (son, image, texte)
 
-## Development server
+## Récupérer les sources
+git clone https://github.com/nored91/angular.git
+
+## Serveur de dev
 Lancer `ng serve` pour naviguer sur `http://localhost:4200/`.
 
-## node server
+## Serveur node
 Lancer `node server` pour mettre en place le serveur node

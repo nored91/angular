@@ -19,9 +19,7 @@
   <div class="view">
     <input #inputFait class="toggle" type="checkbox" name="fait" [ngModel]="nf.fait" (ngModelChange)="fait(inputFait.checked)">
     <label class="texte">
-      <audio src="{{getPath()}}">
-      Votre navigateur ne supporte pas l'élément <code>audio</code>.
-      </audio>
+      <a href="{{getPath()}}">{{ nf.texte }}</a>
   </label>
     <button class="destroy" (click)="dispose()"></button>
   </div>
